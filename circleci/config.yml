@@ -1,0 +1,38 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:10.16.3
+    steps:
+      - checkout
+      - run:
+          name: Update NPM
+          command: "cd cz2006backend && sudo npm install -g npm@5"
+      - restore_cache:
+          key: dependency-cache-{{ checksum "cz2006backend/package-lock.json" }}
+      - run:
+          name: Install Dependencies
+          command: "cd cz2006backend && npm install"
+      - save_cache:
+          key: dependency-cache-{{ checksum "cz2006backend/package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Run tests
+          command: "cd cz2006backend && npm test"
+      - run:
+          name: Update NPM
+          command: "cd cz2006frontend && sudo npm install -g npm@5"
+      - restore_cache:
+          key: dependency-cache-{{ checksum "cz2006frontend/package-lock.json" }}
+      - run:
+          name: Install Dependencies
+          command: "cd cz2006frontend && npm install"
+      - save_cache:
+          key: dependency-cache-{{ checksum "cz2006frontend/package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Run tests
+          command: "cd cz2006frontend && npm test"

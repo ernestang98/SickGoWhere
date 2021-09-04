@@ -1,0 +1,288 @@
+{
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 1,
+  "numPassedTests": 19,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 1,
+  "numTotalTests": 19,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1618141169731,
+  "success": false,
+  "testResults": [
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 19,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1618141216086,
+        "start": 1618141170055
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "unmatched": 0,
+        "updated": 0,
+        "uncheckedKeys": []
+      },
+      "testFilePath": "/Users/ernestang98/Desktop/Year 2 Sem 2/CZ2006/cz2006project/cz2006frontend/__tests__/App-test.js",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "loginTest"
+          ],
+          "duration": 2385,
+          "failureMessages": [],
+          "fullName": "loginTest input correct email and password",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input correct email and password"
+        },
+        {
+          "ancestorTitles": [
+            "loginTest"
+          ],
+          "duration": 235,
+          "failureMessages": [],
+          "fullName": "loginTest input email and no password",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input email and no password"
+        },
+        {
+          "ancestorTitles": [
+            "loginTest"
+          ],
+          "duration": 181,
+          "failureMessages": [],
+          "fullName": "loginTest input password and no email",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input password and no email"
+        },
+        {
+          "ancestorTitles": [
+            "loginTest"
+          ],
+          "duration": 216,
+          "failureMessages": [],
+          "fullName": "loginTest input correct email and wrong password",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input correct email and wrong password"
+        },
+        {
+          "ancestorTitles": [
+            "loginTest"
+          ],
+          "duration": 225,
+          "failureMessages": [],
+          "fullName": "loginTest input wrong email and correct password",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input wrong email and correct password"
+        },
+        {
+          "ancestorTitles": [
+            "registerTest"
+          ],
+          "duration": 475,
+          "failureMessages": [],
+          "fullName": "registerTest input correct credentials but already has an account",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input correct credentials but already has an account"
+        },
+        {
+          "ancestorTitles": [
+            "registerTest"
+          ],
+          "duration": 370,
+          "failureMessages": [],
+          "fullName": "registerTest input correct credentials but passwords do not match",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input correct credentials but passwords do not match"
+        },
+        {
+          "ancestorTitles": [
+            "registerTest"
+          ],
+          "duration": 384,
+          "failureMessages": [],
+          "fullName": "registerTest input correct credentials and no first name",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input correct credentials and no first name"
+        },
+        {
+          "ancestorTitles": [
+            "registerTest"
+          ],
+          "duration": 396,
+          "failureMessages": [],
+          "fullName": "registerTest input correct credentials and no last name",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input correct credentials and no last name"
+        },
+        {
+          "ancestorTitles": [
+            "registerTest"
+          ],
+          "duration": 437,
+          "failureMessages": [],
+          "fullName": "registerTest input correct credentials and no email",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input correct credentials and no email"
+        },
+        {
+          "ancestorTitles": [
+            "registerTest"
+          ],
+          "duration": 346,
+          "failureMessages": [],
+          "fullName": "registerTest input correct credentials and no passwords",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input correct credentials and no passwords"
+        },
+        {
+          "ancestorTitles": [
+            "registerTest"
+          ],
+          "duration": 284,
+          "failureMessages": [],
+          "fullName": "registerTest input correct credentials and no confirm password",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "input correct credentials and no confirm password"
+        },
+        {
+          "ancestorTitles": [
+            "createApptTest"
+          ],
+          "duration": 198,
+          "failureMessages": [],
+          "fullName": "createApptTest Cannot access booking without logging in",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Cannot access booking without logging in"
+        },
+        {
+          "ancestorTitles": [
+            "createApptTest"
+          ],
+          "duration": 164,
+          "failureMessages": [],
+          "fullName": "createApptTest Can access booking after logging in",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Can access booking after logging in"
+        },
+        {
+          "ancestorTitles": [
+            "MapTesting"
+          ],
+          "duration": 776,
+          "failureMessages": [],
+          "fullName": "MapTesting NearestClinics returns a list of 5 clinics",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "NearestClinics returns a list of 5 clinics"
+        },
+        {
+          "ancestorTitles": [
+            "MapTesting"
+          ],
+          "duration": 99,
+          "failureMessages": [],
+          "fullName": "MapTesting Clinics are clickable",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Clinics are clickable"
+        },
+        {
+          "ancestorTitles": [
+            "MapTesting"
+          ],
+          "duration": 217,
+          "failureMessages": [],
+          "fullName": "MapTesting RNLocator has 3 modes of transport",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "RNLocator has 3 modes of transport"
+        },
+        {
+          "ancestorTitles": [
+            "MapTesting"
+          ],
+          "duration": 151,
+          "failureMessages": [],
+          "fullName": "MapTesting RNLocator has 3 modes of transport",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "RNLocator has 3 modes of transport"
+        },
+        {
+          "ancestorTitles": [
+            "MapTesting"
+          ],
+          "duration": 233,
+          "failureMessages": [],
+          "fullName": "MapTesting Cannot book without logging in",
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "Cannot book without logging in"
+        }
+      ],
+      "failureMessage": null
+    }
+  ],
+  "wasInterrupted": false
+}

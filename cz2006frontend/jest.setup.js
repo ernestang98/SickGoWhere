@@ -1,0 +1,149 @@
+import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/async-storage-mock';
+
+jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);
+
+jest.mock('react-native-toast-native', () => ({
+    SHORT: jest.fn(),
+}));
+
+import { NativeModules } from 'react-native';
+
+function keyMirror(keys) {
+    const obj = {};
+    keys.forEach((key) => (obj[key] = key));
+    return obj;
+}
+
+// Mock of what the native code puts on the JS object
+NativeModules.MGLModule = {
+    // constants
+    UserTrackingModes: keyMirror([
+        'None',
+        'Follow',
+        'FollowWithCourse',
+        'FollowWithHeading',
+    ]),
+    StyleURL: keyMirror([
+        'Street',
+        'Dark',
+        'Light',
+        'Outdoors',
+        'Satellite',
+        'SatelliteStreet',
+        'TrafficDay',
+        'TrafficNight',
+    ]),
+    EventTypes: keyMirror([
+        'MapClick',
+        'MapLongClick',
+        'RegionWillChange',
+        'RegionIsChanging',
+        'RegionDidChange',
+        'WillStartLoadingMap',
+        'DidFinishLoadingMap',
+        'DidFailLoadingMap',
+        'WillStartRenderingFrame',
+        'DidFinishRenderingFrame',
+        'DidFinishRenderingFrameFully',
+        'DidFinishLoadingStyle',
+        'SetCameraComplete',
+    ]),
+    CameraModes: keyMirror(['Flight', 'Ease', 'None']),
+    StyleSource: keyMirror(['DefaultSourceID']),
+    InterpolationMode: keyMirror([
+        'Exponential',
+        'Categorical',
+        'Interval',
+        'Identity',
+    ]),
+    LineJoin: keyMirror(['Bevel', 'Round', 'Miter']),
+    LineCap: keyMirror(['Butt', 'Round', 'Square']),
+    LineTranslateAnchor: keyMirror(['Map', 'Viewport']),
+    CirclePitchScale: keyMirror(['Map', 'Viewport']),
+    CircleTranslateAnchor: keyMirror(['Map', 'Viewport']),
+    FillExtrusionTranslateAnchor: keyMirror(['Map', 'Viewport']),
+    FillTranslateAnchor: keyMirror(['Map', 'Viewport']),
+    IconRotationAlignment: keyMirror(['Auto', 'Map', 'Viewport']),
+    IconTextFit: keyMirror(['None', 'Width', 'Height', 'Both']),
+    IconTranslateAnchor: keyMirror(['Map', 'Viewport']),
+    SymbolPlacement: keyMirror(['Line', 'Point']),
+    TextAnchor: keyMirror([
+        'Center',
+        'Left',
+        'Right',
+        'Top',
+        'Bottom',
+        'TopLeft',
+        'TopRight',
+        'BottomLeft',
+        'BottomRight',
+    ]),
+    TextJustify: keyMirror(['Center', 'Left', 'Right']),
+    TextPitchAlignment: keyMirror(['Auto', 'Map', 'Viewport']),
+    TextRotationAlignment: keyMirror(['Auto', 'Map', 'Viewport']),
+    TextTransform: keyMirror(['None', 'Lowercase', 'Uppercase']),
+    TextTranslateAnchor: keyMirror(['Map', 'Viewport']),
+    LightAnchor: keyMirror(['Map', 'Viewport']),
+    OfflinePackDownloadState: keyMirror(['Inactive', 'Active', 'Complete']),
+    OfflineCallbackName: keyMirror(['Progress', 'Error']),
+
+    // methods
+    setAccessToken: jest.fn(),
+    getAccessToken: () => Promise.resolve('test-token'),
+    setTelemetryEnabled: jest.fn(),
+    setConnected: jest.fn(),
+};
+
+NativeModules.MGLOfflineModule = {
+    createPack: (packOptions) => {
+        return Promise.resolve({
+            bounds: packOptions.bounds,
+            metadata: JSON.stringify({ name: packOptions.name }),
+        });
+    },
+    getPacks: () => Promise.resolve([]),
+    deletePack: () => Promise.resolve(),
+    getPackStatus: () => Promise.resolve({}),
+    pausePackDownload: () => Promise.resolve(),
+    resumePackDownload: () => Promise.resolve(),
+    setPackObserver: () => Promise.resolve(),
+    setTileCountLimit: jest.fn(),
+    setProgressEventThrottle: jest.fn(),
+};
+
+NativeModules.MGLSnapshotModule = {
+    takeSnap: () => {
+        return Promise.resolve('file://test.png');
+    },
+};
+
+NativeModules.MGLLocationModule = {
+    getLastKnownLocation: jest.fn(),
+    start: jest.fn(),
+    pause: jest.fn(),
+};
+
+jest.mock('react-native-location', () => {
+    return {
+        RNLocation: jest.fn(),
+        requestPermission: jest.fn(() => Promise.resolve(true)),
+        getLatestLocation: jest.fn(() => Promise.resolve()),
+    }
+})
+
+jest.mock('react-native-geolocation-service', () => ({
+    Geolocation: jest.fn(),
+    addListener: jest.fn(),
+    getCurrentPosition: jest.fn(),
+    removeListeners: jest.fn(),
+    requestAuthorization: jest.fn(),
+    setConfiguration: jest.fn(),
+    startObserving: jest.fn(),
+    stopObserving: jest.fn()
+}));
+
+jest.mock('react-native-google-maps-directions', () => ({
+    getDirections: jest.fn(),
+}));
+
+

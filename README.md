@@ -1,5 +1,9 @@
 ## CZ2006 Workflow:
 
+### Important Links:
+1. Figma: https://www.figma.com/file/EtrXjcbUW2vFTMNQ2PdTJ4/CZ2006-UI-Design?node-id=2%3A102 
+2. Demo: https://youtu.be/07jsQJjUuI8 
+
 ### Architecture (MERN Stack):
 1. Frontend: React Native (I think we should use stack navigator)
 2. Backend: Node.js

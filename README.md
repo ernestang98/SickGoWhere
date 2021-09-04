@@ -34,12 +34,7 @@
 3. JWT Token Authentication https://www.youtube.com/watch?v=x5gLL8-M9Fo&feature=emb_title
 4. Node.js https://www.youtube.com/watch?v=RLtyhwFtXQA&t=4s
 5. MERN Stack https://www.youtube.com/watch?v=7CqJlxBYj-M
-
-
-
-
-
-7. RESTer Chrome Extension https://chrome.google.com/webstore/detail/rester/eejfoncpjfgmeleakejdcanedmefagga
+6. RESTer Chrome Extension https://chrome.google.com/webstore/detail/rester/eejfoncpjfgmeleakejdcanedmefagga
 
 ### React Native set up (linking android emulator):
 1. https://reactnative.dev/docs/environment-setup

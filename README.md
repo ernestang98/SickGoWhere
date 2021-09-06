@@ -1,7 +1,7 @@
 ## CZ2006 Workflow:
 
 ### Important Links:
-1. Figma: https://www.figma.com/file/EtrXjcbUW2vFTMNQ2PdTJ4/CZ2006-UI-Design?node-id=2%3A102 
+1. Figma: [Link Here](https://www.figma.com/file/EtrXjcbUW2vFTMNQ2PdTJ4/CZ2006-UI-Design?node-id=14%3A4)
 2. Demo: https://youtu.be/07jsQJjUuI8 
 
 ### Architecture (MERN Stack):

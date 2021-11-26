@@ -2,7 +2,7 @@
 
 ### Important Links:
 
-1. Figma: [Link Here](https://www.figma.com/file/EtrXjcbUW2vFTMNQ2PdTJ4/CZ2006-UI-Design?node-id=14%3A4)
+1. Figma (require login and invite): [Link Here](https://www.figma.com/file/EtrXjcbUW2vFTMNQ2PdTJ4/CZ2006-UI-Design?node-id=14%3A4)
 
 2. Demo: https://youtu.be/XjQcCbKEX3U
 
